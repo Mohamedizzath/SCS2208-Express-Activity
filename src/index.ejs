@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link href="styles/bootstrap.css" rel="stylesheet" />
+    <title>Home page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <img class="img-fluid" src="images/main-page-image.png" alt="main-page-image" />
+            </div>
+            <div class="col d-flex flex-column justify-content-center align-items-center">
+                <h1>Welcome to our website</h1>
+                <% if(email === undefined) { %>
+                <h3>Your not logged to our system</h3>
+                <a href="/login" class="btn btn-outline-dark mt-3">Login</a>
+                <% } else { %>
+                <h3>Your logged as <%= email %></h3>
+                <% } %>
+                <p class="mt-5">Number of times visits to the site = <%= count %></p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
